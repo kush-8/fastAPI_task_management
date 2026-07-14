@@ -12,13 +12,9 @@ class TaskUpdate(BaseModel):
     description: Optional[str] = None
     completed: Optional[bool] = None
 
-class TaskRead(BaseModel):
+class TaskResponse(BaseModel):
     model_config = {"from_attributes": True}
     id: UUID
     title: str
     description: str
     completed: bool
-
-class ResponseModel(BaseModel):
-    status: str
-    task: TaskRead

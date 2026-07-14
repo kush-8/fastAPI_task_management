@@ -37,4 +37,4 @@ def delete_task(db: Session, task_id: UUID):
         raise HTTPException(status_code=404, detail="Task not found")
     db.delete(task)
     db.commit()
-    return task
+    return None
