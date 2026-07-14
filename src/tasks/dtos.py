@@ -18,3 +18,4 @@ class TaskResponse(BaseModel):
     title: str
     description: str
     completed: bool
+    user_id: UUID
